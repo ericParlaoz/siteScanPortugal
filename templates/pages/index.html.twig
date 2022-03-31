@@ -1,0 +1,361 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Visita virtual de 360° e digitalização do espaço{% endblock %}
+{% block meta_description %}Um tour virtual é mais que uma simples foto, é uma imersão em um ambiente 360°. Oferece uma imagem vívida de alta qualidade, total liberdade de navegação.{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/main.css') }}">
+    <link rel="stylesheet"
+          href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css') }}">
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('js/wow.min.js') }}"></script>
+    <script type="text/javascript">
+        new WOW().init()
+    </script>
+{% endblock %}
+
+{% block body %}
+    <section class="section1">
+        <div class="parallax-effect">
+            <div class="container  ">
+                <div class="row ">
+                    <div class="col-sm-8">
+                        <h1 class="H1-blanc wow animate__animated animate__fadeInLeft">Visita virtual de 360° e digitalização do espaço</h1>
+                        <H2 class="H2-couleurs-head">PARA INDIVÍDUOS E PROFISSIONAIS</H2>
+                        <a href="{{ asset('#saber') }}"><button type="button" class="button btn">Saber mais</button></a>
+                    </div>
+                    <div class="col">
+                        <img class="mx-auto d-block cam-img wow animate__animated animate__fadeInRight"
+                             src="{{ asset('/images/camera.png') }}" alt="visita virtual 3D">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section2" id="saber">
+        <div class="container text-center ">
+            <div class="row text-center">
+                <div class="col">
+                    <h2 class="H2-grey">O visita virtual 3D, uma experiência única!</h2>
+                    <hr class="barre-couleur mx-auto">
+                    <p>Nossa solução de tour virtual 3D permite que você viva, compartilhe e, acima de tudo, dê vida
+                        experiências únicas, rápidas, fluidas e inesquecíveis em total imersão em seu computador,
+                        tablet ou headset de realidade virtual.<br><br>Esse desempenho também pode ser visualizado em um
+                        A máscara VR permite que seus clientes façam suas escolhas com confiança. As visitas
+                        virtual pode ser integrado diretamente no Google Street View, então tome um tempo
+                        com antecedência, aprimorando suas operações de comunicação, bem como sua referência.</p>
+                </div>
+            </div>
+            <div class="row text-center justify-content-center">
+                <div class="col wow animate__animated animate__zoomIn">
+                    <div class="card">
+                        <img class="mx-auto d-block" src="{{ asset('images/speed-icon.jpg') }}" width="80" alt="visita virtual rapido">
+                        <h4 class="H4-couleur">Rápido</h4>
+                        <p>Precisamos de 1 hora para escanear uma propriedade de 100 m2. Após 48 horas, seu espaço 3D é
+                            pronto.</p>
+                    </div>
+                </div>
+                <div class="col wow animate__animated animate__zoomIn">
+                    <div class="card">
+                        <img class="mx-auto d-block" src="{{ asset('images/puissant-icon.jpg') }}" width="80" alt="visita virtual poderoso">
+                        <h4 class="H4-couleur">Poderoso</h4>
+                        <p>Seus visitantes ficarão fascinados por um trabalho feito com perfeição.</p>
+                    </div>
+                </div>
+                <div class="col wow animate__animated animate__zoomIn">
+                    <div class="card">
+                        <img class="mx-auto d-block" src="{{ asset('images/simple-icon.jpg') }}" width="80" alt="visita virtual simple">
+                        <h4 class="H4-couleur">Simples</h4>
+                        <p>Trabalhamos juntos na criação do seu projeto e garantimos uma entrega rápida. Precisamos de 1 hora para escanear uma propriedade de 100 m2. Após 48 horas, seu espaço 3D está pronto.</p>
+                    </div>
+                </div>
+            </div>
+            <a href="{{ asset('/preco-visita-virtual') }}"><button type="button" class="button btn mt-5">Conheça nossos preços para um tour virtual 3D</button></a>
+        </div>
+    </section>
+    <section class="section3" id="rendus">
+        <div class="container">
+            <h2 class="H2-grey">Solução de tour virtual 3D imersiva</h2>
+            <hr class="barre-couleur">
+            <p>Nossos passeios virtuais 3D imersivos podem ser aprimorados com muitos serviços associados, como:
+                publicação no Google Street View; tiros aéreos com drone; um passeio virtual com
+                loja online integrada; visitas guiadas virtuais pagas a museus e exposições;
+                jogos de fuga; etc</p>
+            <div class="row align-items-center">
+                <div class="col">
+                    <div class="block-responsive">
+                    {#<img class="img-fluid img-effet wow animate__animated animate__zoomIn" src="{{ asset('images/atout1.jpg') }}"alt="">#}
+                    <iframe width="425" height="344" src="https://static.matterport.com/mp_www/MP_ListingDay_Pro-Res_NoEndCard_4-3.mp4" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-sm-7">
+                    <h4 class="H4-couleur">As diferentes renderizações</h4>
+                    <ul>
+                        <li><strong>Visita virtual:</strong> Mova-se entre os diferentes pontos de vista (círculos
+                            no chão) e amplie os pontos de interesse.
+                        </li>
+                        <li><strong>Casa de Bonecas – Modelo 3D:</strong> todo o espaço é transcrito em 3D</li>
+                        <li><strong>Conteúdo de mídia:</strong> enriqueça sua visita adicionando informações
+                            complementar. Texto, imagens, vídeos, link do Facebook ou para uma interface de reservas
+                        </li>
+                        <li><strong>Plantas baixas de medidores:</strong> do Tour Virtual Matterport, é
+                            possível fornecer planos de massa medidos.
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <a href="https://my.matterport.com/show/?m=ndoBgJJahdx&utm_source=hit-content&play=1&utm_source=4"
+                   target="_blank"><input type="button" class="button btn mb-3" value="Veja uma demonstração"></a>
+                <a href="{{ asset('portfolio-visita-virtual') }}"><input type="button" class="button-border btn mb-3" value="Veja nossas conquistas"></a>
+            </div>
+        </div>
+    </section>
+    <section class="section4">
+        <div class="container">
+            <div class="row align-items-center justify-content-center blanc">
+                <H2 class="col"><strong>Resultados garantidos</strong></H2>
+                <hr class="col-sm-7 blanc">
+            </div>
+            <div class="row mt-5 justify-content-center">
+                <div class="col text-center wow animate__animated animate__zoomIn">
+                    <p class="chiffre-blanc">95%</p>
+                    <p class="text-blanc">são mais propensos a ligar sobre propriedades com tours virtuais
+                        3D</p>
+                </div>
+                <div class="col text-center wow animate__animated animate__zoomIn">
+                    <p class="chiffre-blanc">
+                        20%</p>
+                    <p class="text-blanc">propostas de compra são feitas sem uma visita ao local</p>
+                </div>
+                <div class="col text-center wow animate__animated animate__zoomIn">
+                    <p class="chiffre-blanc">74%</p>
+                    <p class="text-blanc">dos agentes que usam nossa oferta de virtualização 3D ganham mais de
+                        contratos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section5" id="prestations">
+        <div class="container">
+            <h2 class="H2-grey">O tour virtual 3D imersivo para todos os setores</h2>
+            <hr class="barre-couleur">
+            <div class="row">
+                <div class="col">
+                    <div class="d-block block-responsive">
+                        <img src="{{ asset('images/scan.jpg') }}" class="img-fluid img-effet wow animate__animated animate__zoomIn"
+                             alt="tour virtual imobiliário">
+                        <h3 class="H3-grey">Imobiliário</h3>
+                        <p>Evite todo o aborrecimento associado às visitas. Permita que os compradores mergulhem on-line em
+                            sua futura casa.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="d-block block-responsive">
+                        <img src="{{ asset('images/event.jpg') }}" class="img-fluid img-effet wow animate__animated animate__zoomIn"
+                            alt="tour virtual evento">
+                        <h3 class="H3-grey">Evento</h3>
+                        <p>Ofereça aos clientes e provedores de eventos um tour virtual 3D imersivo do seu
+                            propriedades, infraestrutura e espaços para eventos.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="d-block block-responsive">
+                        <img src="{{ asset('images/hotel.jpg') }}" class="img-fluid img-effet wow animate__animated animate__zoomIn"
+                            alt="tour virtual hotel ">
+                        <h3 class="H3-grey">Hotel</h3>
+                        <p>Você acelerará as decisões de reserva e aumentará a confiança fornecendo um
+                            experiência 3D imersiva que é tão real que os clientes sentirão que já estão
+                            feriados.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="d-block block-responsive">
+                        <img src="{{ asset('images/location.jpg') }}" class="img-fluid img-effet wow animate__animated animate__zoomIn"
+                            alt="tour virtual airbnb">
+                        <h3 class="H3-grey">Aluguel por temporada</h3>
+                        <p>Aluguel por temporada
+
+                            tour virtual 3D imersivo para aluguel sazonal
+
+                            Com um tour virtual 3D, seu cliente está em total imersão interativa.
+                            Sem surpresas desagradáveis: seus futuros inquilinos sabem com antecedência exatamente o que querem
+                            verá quando eles entrarem no seu aluguel. </p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="d-block block-responsive">
+                        <img src="{{ asset('images/musee.jpg') }}" class="img-fluid img-effet wow animate__animated animate__zoomIn"
+                             alt="tour virtual espaço cultural">
+                        <h3 class="H3-grey">Espaço cultural</h3>
+                        <p>Estimule emocionalmente os visitantes com passeios imersivos em museus virtuais em 3D,
+                            teatro, auditório. Apresente-os a novas exposições ou mostre-os
+                            soberba arquitetura. </p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="d-block block-responsive">
+                        <img src="{{ asset('images/assurance.jpg') }}" class="img-fluid img-effet wow animate__animated animate__zoomIn"
+                             alt="tour virtual seguro">
+                        <h3 class="H3-grey">Seguro</h3>
+                        <p>Em caso de sinistro, deverá apresentar detalhadamente o seu imóvel, espaço e localização. Visita
+                            3D virtual permite fazer um inventário após o desastre </p>
+                    </div>
+                </div>
+                <img src="{{ asset('images/google.jpg') }}" alt="tour virtual google street view">
+            </div>
+        </div>
+    </section>
+    <section class="section6">
+        <div class="container mt-5">
+            <h2 class="H2-grey">Progresso do nosso serviço</h2>
+            <hr class="barre-couleur">
+            <div class="row text-center mb-3">
+                <div class="col wow animate__animated animate__zoomIn">
+                    <div class="card">
+                        <img class="mx-auto d-block" src="{{ asset('images/diag-icon.jpg') }}" width="80" alt="">
+                        <h4 class="H4-color">Gerenciamento de projetos</h4>
+                        <p>Após identificar suas necessidades, planejamos juntos a organização do
+                            visualização de seus diferentes espaços.</p>
+                    </div>
+                </div>
+                <div class="col wow animate__animated animate__zoomIn">
+                    <div class="card">
+                        <img class="mx-auto d-block" src="{{ asset('images/photos-icon.jpg') }}" width="80" alt="">
+                        <h4 class="H4-color">Fotografia</h4>
+                        <p>Viemos ao local para escanear o espaço e tirar as fotos.</p>
+                    </div>
+                </div>
+                <div class="col wow animate__animated animate__zoomIn">
+                    <div class="card">
+                        <img class="mx-auto d-block" src="{{ asset('images/rendu-icon.jpg') }}" width="80" alt="">
+                        <h4 class="H4-color">Renderização</h4>
+                        <p>48 horas após a digitalização, enviamos o link de seus tours virtuais 3D por
+                            e-mail.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col">
+                    <img src="{{ asset('images/atout5.jpg') }}" class="img-fluid img-effet wow animate__animated animate__zoomIn"
+                         alt="tour virtual braga">
+                </div>
+                <div class="col-sm-7">
+                    <h4 class="H4-couleur">Após nossa intervenção, entregaremos a você entre 24 e 48 horas:</h4>
+                    <ul>
+                        <li>O tour virtual 3D acessível em WebTV, PC, tablets, smartphones</li>
+                        <li>A visualização "Casa de bonecas" da propriedade</li>
+                        <li>Um tour automático pela propriedade</li>
+                        <li>Um jogo de fotos 4K HDR</li>
+                        <li>Visualização em realidade virtual imersiva (via headset VR não fornecido)</li>
+                    </ul>
+
+                    <a href="{{ asset('#contact') }}"><button type="button" class="button btn">Réserva uma visita virtual</button></a>
+                    <a href="tel:0788102112"><button type="button" class="button-border btn"> 07 88 10 21 12</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section7" id="vr">
+        <div class="container">
+            <h2 class="H2-grey">Realidade virtual</h2>
+            <hr class="barre-couleur">
+            <div class="row">
+                <div class="col-sm-7">
+                    <p>Graças aos headsets de realidade virtual, você pode ver todos os nossos tours virtuais em
+                        realidade virtual.<br><br>
+                        Você usa seu smartphone como tela no headset de realidade virtual, uma imersão
+                        total e marcante em seu lugar.<br><br>
+                        Como visualizar nossos tours virtuais em realidade virtual?</p>
+                    <ul>
+                        <li>Abra o tour virtual no seu celular</li>
+                        <li>Ativar o modo VR</li>
+                        <li>Coloque seu smartphone no headset de RV</li>
+                        <li>Olhe para o capacete e deixe-se surpreender…</li>
+                    </ul>
+                    <div class="mt-5">
+                        <a href="{{ asset('#contact') }}"><input type="button" class="button-border btn mb-3" value="Contate-Nos"></a>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="{{ asset('images/vr.jpg') }}"
+                         class="mx-auto d-block wow animate__animated animate__fadeInRight" alt="tour virtual Vila Verde">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section8">
+        <div class="container">
+            <div class="titre">Scan 3D</div>
+            <h2 class="H2-grey">Depoimentos de clientes</h2>
+            <hr class="barre-couleur">
+            <div class="row mx-auto">
+                <div class="col wow animate__animated animate__zoomIn">
+                    <div class="temoignage">
+                        <div class="name">José SILVA</div>
+                        <div class="comment">LOJA</div>
+                        <img class="mb-3" src="{{ asset('images/etoiles.svg') }}" alt="">
+                        <p>"Uma visita virtual e fotos simplesmente mágicas atencioso e muito profissional Eric
+                            sabe destacar nosso estabelecimento sempre ouvindo, recomendo fortemente para isso
+                            que não o conhece porque além de sua técnica, ele tem uma explicação de seu trabalho
+                            muito claro obrigado novamente a Eric."</p>
+                    </div>
+                </div>
+                <div class="col wow animate__animated animate__zoomIn">
+                    <div class="temoignage">
+                        <div class="name">Marco FERREIRA</div>
+                        <div class="comment">LOJA</div>
+                        <img class="mb-3" src="{{ asset('images/etoiles.svg') }}" alt="">
+                        <p>Gostamos muito de trabalhar com o Sr. Éric PARLAOZ. Rápido, confiável, conseguiu traduzir a beleza e singularidade do lugar em um contato muito agradável. Um ótimo trabalho que aprimora nosso site!</p>
+                    </div>
+                </div>
+                <div class="col wow animate__animated animate__zoomIn">
+                    <div class="temoignage">
+                        <div class="name">Sarah GOMES</div>
+                        <div class="comment">Agence immobilière</div>
+                        <img class="mb-3" src="{{ asset('images/etoiles.svg') }}" alt="">
+                        <p>Já 3 tours virtuais para nossa imobiliária. Um volume de negócios que aumenta e que permite aos meus clientes ter uma visão dos produtos que oferecemos. Parabéns a Éric PARLAOZ pelo seu profissionalismo e talento a um preço imbatível.</p>                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section9" id="contact">
+        <div class="parallax-effect-footer">
+            <h2 class="H2-couleurs text-center">Olá! Entre em contacto connosco</h2>
+            <div class="container col-sm-12">
+                {% for message in app.flashes('success') %}
+                    <div class="text-center alert-success">{{ message }}</div>
+                {% endfor %}
+                <div class="bulle row ">
+                    {{ form_start(form) }}
+                    {% form_theme form 'bootstrap_5_layout.html.twig' %}
+                    <div class="col-sm-12 container-sm mb-3 mt-3">
+                        <div class="form-group">
+                            {{ form_row(form.nom, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                        <div class="form-group">
+                            {{ form_row(form.email, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                        <div class="form-group">
+                            {{ form_row(form.telephone, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                        <div class="form-group">
+                            {{ form_row(form.message, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                        <div class="form-group">
+                            {{ form_row(form.confidentialite) }} Autorizo este site a manter os meus dados pessoais transmitidos através deste formulário. Nenhuma exploração comercial será feita dos dados armazenados. Consulte a nossa política de gestão de dados pessoais na página (Política de Privacidade)
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Enviar" class="button btn btn-danger mt-3 mb-3">
+                        </div>
+                        {{ form_end(form) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
