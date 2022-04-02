@@ -29,7 +29,7 @@ class PagesController extends AbstractController
 
             $mail->send(
                 $contactFormData->getEmail(),
-                'silverex@hotmail.fr',
+                'nalili34540@gmail.com',
                 'vous avez reçu un email',
                 'Sender : '.$contactFormData->getEmail().\PHP_EOL.
 
