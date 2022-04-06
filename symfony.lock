@@ -413,6 +413,9 @@
             "config/packages/notifier.yaml"
         ]
     },
+    "symfony/oh-my-smtp-mailer": {
+        "version": "v6.0.7"
+    },
     "symfony/options-resolver": {
         "version": "v6.0.3"
     },

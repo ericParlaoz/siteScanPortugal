@@ -18,7 +18,7 @@
 {% endblock %}
 
 {% block body %}
-    <section class="section1">
+    <section class="section-show">
         <div class="parallax-effect">
             <div class="container  ">
                 <div class="row ">
@@ -40,30 +40,24 @@
         <div class="container mt-5">
             <h2 class="H2-grey">Découvrez quelques unes de nos réalisations </h2>
             <hr class="barre-couleur">
-            <div class="row align-items-center">
-                <div class="col text-center">
-                    <H3 class="H4-couleur">Maison Balaruc</H3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eos maiores minima numquam, odit officiis porro quia rem veritatis voluptate.</p>
-                    <img src="http://via.placeholder.com/450x360" alt="">
+            {% for annonce in portfolio %}
+                <div class="col">
+                    <div class="card-show" style="width: 18rem;">
+                        <img class="img-fluid" src="{{ annonce.image }}" alt="">
+                        <div class="card-body">
+
+                            <h5 class="card-title">{{ annonce.titre}}</h5>
+                            <p class="card-text">
+                            <ul>
+                                <li>{{ annonce.ville}}</li>
+                                <li>{{ annonce.superficie}}</li>
+                            </ul>
+                            </p>
+                            <a href="{{ path('show_client', {'id': annonce.id}) }}" class="button btn">Visiter</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col text-center">
-                    <H3 class="H4-couleur">Maison Balaruc</H3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eos maiores minima numquam, odit officiis porro quia rem veritatis voluptate.</p>
-                    <img src="http://via.placeholder.com/450x360" alt="">
-                </div>
-            </div>
-            <div class="row align-items-center">
-                <div class="col text-center">
-                    <H3 class="H4-couleur">Maison Balaruc</H3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eos maiores minima numquam, odit officiis porro quia rem veritatis voluptate.</p>
-                    <img src="http://via.placeholder.com/450x360" alt="">
-                </div>
-                <div class="col text-center">
-                    <H3 class="H4-couleur">Maison Balaruc</H3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eos maiores minima numquam, odit officiis porro quia rem veritatis voluptate.</p>
-                    <img src="http://via.placeholder.com/450x360" alt="">
-                </div>
-            </div>
+            {% endfor %}
         </div>
         <div class="text-center mt-5">
             <a href="{{ asset('portfolio-visita-virtual#contact') }}"><button type="button" class="button btn">Réserva uma visita virtual</button></a>

@@ -3,7 +3,9 @@
 namespace App\Controller;
 
 use App\Entity\Contact;
+use App\Entity\Porfolio;
 use App\Form\ContactType;
+use App\Repository\PorfolioRepository;
 use App\Service\SendMailService;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -29,7 +31,7 @@ class PagesController extends AbstractController
 
             $mail->send(
                 $contactFormData->getEmail(),
-                'nalili34540@gmail.com',
+                'contact@logo-concept-host.fr',
                 'vous avez reçu un email',
                 'Sender : '.$contactFormData->getEmail().\PHP_EOL.
 
@@ -58,12 +60,13 @@ class PagesController extends AbstractController
 
             $contactFormData = $form->getData();
 
+
             $entityManager->persist($client);
             $entityManager->flush();
 
             $mail->send(
                 $contactFormData->getEmail(),
-                'silverex@hotmail.fr',
+                'contact@logo-concept-host.fr',
                 'vous avez reçu un email',
                 'Sender : '.$contactFormData->getEmail().\PHP_EOL.
 
@@ -82,7 +85,7 @@ class PagesController extends AbstractController
     }
 
     #[Route('/portfolio-visita-virtual', name: 'portfolio')]
-    public function portfolio(Request $request, SendMailService $mail, EntityManagerInterface $entityManager): Response
+    public function portfolio(Request $request, SendMailService $mail, EntityManagerInterface $entityManager, PorfolioRepository $porfolioRepository): Response
     {
 
         $client = new Contact();
@@ -98,7 +101,7 @@ class PagesController extends AbstractController
 
             $mail->send(
                 $contactFormData->getEmail(),
-                'silverex@hotmail.fr',
+                'contact@logo-concept-host.fr',
                 'vous avez reçu un email',
                 'Sender : '.$contactFormData->getEmail().\PHP_EOL.
 
@@ -112,7 +115,8 @@ class PagesController extends AbstractController
         }
 
         return $this->render('pages/portfolio.html.twig',[
-            'form' => $form->createView()
+            'form' => $form->createView(),
+             'portfolio' => $porfolioRepository->findAll()
         ]);
     }
 
@@ -126,5 +130,14 @@ class PagesController extends AbstractController
     public function privacidade(): Response
     {
         return $this->render('pages/privacidade.html.twig');
+    }
+
+    #[Route('/portfolio-visita-virtual/{id}', name: 'show_client', methods: ['GET'])]
+    public function showClient(Porfolio $porfolio): Response
+    {
+
+        return $this->render('pages/showClient.html.twig', [
+            'portfolio' => $porfolio
+        ]);
     }
 }

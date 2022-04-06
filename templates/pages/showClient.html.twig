@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Scan 3D{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/main.css') }}">
+    <link rel="stylesheet"
+          href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css') }}">
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('js/wow.min.js') }}"></script>
+    <script type="text/javascript">
+        new WOW().init()
+    </script>
+{% endblock %}
+
+{% block body %}
+    <section class="section-show">
+        <div class="container mt-5">
+            <div class="card-show2">
+                <div class="row">
+                    <h2 class="H2-couleurs">{{ portfolio.titre }}</h2>
+                    <div class="col">
+                        <div class="block-iframe">
+                        <iframe width="600" height="400" src="{{ portfolio.iframe }}" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="block-responsive">
+                        <table class="table">
+                            <tbody>
+                            <tr>
+                                <th>Localisation</th>
+                                <td>{{ portfolio.ville }}</td>
+                            </tr>
+                            <tr>
+                                <th>Superficie</th>
+                                <td>{{ portfolio.superficie }}</td>
+                            </tr>
+                            <tr>
+                                <th>Agence</th>
+                                <td>{{ portfolio.agence }}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                            <h5>Description</h5>
+                            {{ portfolio.description }}
+                        </div>
+                    </div>
+                </div>
+                <a class="button btn mt-3" href="{{ asset('portfolio-visita-virtual#decouvrir') }}">Précedent</a>
+                <a class="button-border btn mt-3" href="{{ portfolio.link }}" target="_blank">Voir l'annonce</a>
+            </div>
+        </div>
+    </section>
+{% endblock %}
