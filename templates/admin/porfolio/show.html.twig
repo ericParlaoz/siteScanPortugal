@@ -2,49 +2,65 @@
 
 {% block title %}Porfolio{% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/main.css') }}">
+{% endblock %}
+
 {% block body %}
-    <h1>Porfolio</h1>
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ porfolio.id }}</td>
-            </tr>
-            <tr>
-                <th>Titre</th>
-                <td>{{ porfolio.titre }}</td>
-            </tr>
-            <tr>
-                <th>Ville</th>
-                <td>{{ porfolio.ville }}</td>
-            </tr>
-            <tr>
-                <th>Superficie</th>
-                <td>{{ porfolio.superficie }}</td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>{{ porfolio.description }}</td>
-            </tr>
-            <tr>
-                <th>Iframe</th>
-                <td>{{ porfolio.iframe }}</td>
-            </tr>
-            <tr>
-                <th>Agence</th>
-                <td>{{ porfolio.agence }}</td>
-            </tr>
-            <tr>
-                <th>Lien</th>
-                <td>{{ porfolio.link }}</td>
-            </tr>
-        </tbody>
-    </table>
+    <section class="section-admin">
+        <div class="container container-admin">
+            <div class="row">
+                <div class="card-admin">
+                    <h2>Porfolio</h2>
 
-    <a href="{{ path('app_porfolio_index') }}">back to list</a>
+                    <table class="table">
+                        <tbody>
+                        <tr>
+                            <th>Id</th>
+                            <td>{{ porfolio.id }}</td>
+                        </tr>
+                        <tr>
+                            <th>Titre</th>
+                            <td>{{ porfolio.titre }}</td>
+                        </tr>
+                        <tr>
+                            <th>Ville</th>
+                            <td>{{ porfolio.ville }}</td>
+                        </tr>
+                        <tr>
+                            <th>Superficie</th>
+                            <td>{{ porfolio.superficie }}</td>
+                        </tr>
+                        <tr>
+                            <th>Description</th>
+                            <td>{{ porfolio.description }}</td>
+                        </tr>
+                        <tr>
+                            <th>Iframe</th>
+                            <td>{{ porfolio.iframe }}</td>
+                        </tr>
+                        <tr>
+                            <th>Agence</th>
+                            <td>{{ porfolio.agence }}</td>
+                        </tr>
+                        <tr>
+                            <th>Lien</th>
+                            <td>{{ porfolio.link }}</td>
+                        </tr>
+                        </tbody>
+                    </table>
 
-    <a href="{{ path('app_porfolio_edit', {'id': porfolio.id}) }}">edit</a>
+                    <a class="btn btn-primary" href="{{ path('app_porfolio_index') }}">Retour</a>
 
-    {{ include('admin/porfolio/_delete_form.html.twig') }}
+                    <a class="btn btn-success" href="{{ path('app_porfolio_edit', {'id': porfolio.id}) }}">Éditer</a>
+
+                    {{ include('admin/porfolio/_delete_form.html.twig') }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 {% endblock %}

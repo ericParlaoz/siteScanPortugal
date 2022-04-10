@@ -2,10 +2,24 @@
 
 {% block title %}New Porfolio{% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/main.css') }}">
+{% endblock %}
+
 {% block body %}
-    <h1>Create new Porfolio</h1>
 
-    {{ include('admin/porfolio/_form.html.twig') }}
+    <section class="section-admin">
+        <div class="container container-admin">
+            <div class="row">
+                <div class="card-admin">
+                    <h2>Nouveau</h2>
 
-    <a href="{{ path('app_porfolio_index') }}">back to list</a>
+                    {{ include('admin/porfolio/_form.html.twig') }}
+
+                    <a class="btn btn-primary" href="{{ path('app_porfolio_index') }}">Retour</a>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}

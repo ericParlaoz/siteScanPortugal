@@ -2,12 +2,26 @@
 
 {% block title %}Edit Porfolio{% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/main.css') }}">
+{% endblock %}
+
 {% block body %}
-    <h1>Edit Porfolio</h1>
 
-    {{ include('admin/porfolio/_form.html.twig', {'button_label': 'Update'}) }}
+    <section class="section-admin">
+        <div class="container container-admin">
+            <div class="row">
+                <div class="card-admin">
+                    <h2>Editer Porfolio</h2>
 
-    <a href="{{ path('app_porfolio_index') }}">back to list</a>
+                    {{ include('admin/porfolio/_form.html.twig', {'button_label': 'Éditer'}) }}
 
-    {{ include('admin/porfolio/_delete_form.html.twig') }}
+                    <a class="btn btn-primary" href="{{ path('app_porfolio_index') }}">Retour</a>
+
+                    {{ include('admin/porfolio/_delete_form.html.twig') }}
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}

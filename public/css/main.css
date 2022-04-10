@@ -308,6 +308,31 @@ h4 {
     padding-bottom: 50px;
 }
 
+/* admin */
+
+.card-admin {
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    box-shadow: 10px 10px 15px 10px rgba(0, 0, 0, 0.1);
+    border: none;
+    margin: 10px;
+    max-width: 1280px;
+}
+
+.container-admin {
+    max-width: 1280px;
+}
+
+.section-admin {
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+
+.h1-admin {
+    color: #212529;
+}
+
 
 /* Responsive */
 
