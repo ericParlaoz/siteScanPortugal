@@ -15,11 +15,6 @@
         <link href="{{ asset('https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css') }}" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         {% endblock %}
 
-        {% block javascripts %}
-            <script defer src="{{ asset('https://kit.fontawesome.com/eda674f759.js') }}" crossorigin="anonymous"></script>
-            <script defer src="{{ asset('https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js') }}" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-            <script defer src="{{ asset('js/cookiechoices.js') }}"></script><script>document.addEventListener('DOMContentLoaded', function(event){cookieChoices.showCookieConsentBar('Este site utiliza cookies para lhe oferecer o melhor serviço. Ao continuar sua navegação, você aceita o uso de cookies.', 'Aceito', 'Saber mais', '{{ asset('privacidade') }}');});</script>
-        {% endblock %}
     </head>
     <body>
     {% block header %}
@@ -38,19 +33,19 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ asset('#saber') }}">Visitas virtuais</a>
+                            <a class="nav-link" href="{{ path('accueil') }}#saber"><span data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Visitas virtuais</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ asset('#demonstracao') }}">Demonstração</a>
+                            <a class="nav-link" href="{{ path('accueil') }}#demonstracao"><span data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Demonstração</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ asset('#servicos') }}">Serviços</a>
+                            <a class="nav-link" href="{{ path('accueil') }}#servicos"><span data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Serviços</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ asset('portfolio-visita-virtual') }}">Portfolio</a>
+                            <a class="nav-link" href="{{ path('portfolio') }}">Portfolio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ asset('preco-visita-virtual') }}">Preços</a>
+                            <a class="nav-link" href="{{ path('preco') }}">Preços</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="tel:0788102112"><input type="button" class="button-nav btn" value="Réserva"></a>
@@ -108,16 +103,16 @@
 
                         <ul class="list-unstyled mb-0">
                             <li>
-                                <a href="{{ asset('preco-visita-virtual') }}" class="text-decoration-none text-white">Visita virtual Braga</a>
+                                <a href="{{ path('preco') }}" class="text-decoration-none text-white">Visita virtual Braga</a>
                             </li>
                             <li>
-                                <a href="{{ asset('preco-visita-virtual') }}" class="text-decoration-none text-white">Visita virtual Vila Verde</a>
+                                <a href="{{ path('preco') }}" class="text-decoration-none text-white">Visita virtual Vila Verde</a>
                             </li>
                             <li>
-                                <a href="{{ asset('preco-visita-virtual') }}" class="text-decoration-none text-white">Visita virtual Porto</a>
+                                <a href="{{ path('preco') }}" class="text-decoration-none text-white">Visita virtual Porto</a>
                             </li>
                             <li>
-                                <a href="{{ asset('preco-visita-virtual') }}" class="text-decoration-none text-white">Visita virtual Guimaraes </a>
+                                <a href="{{ path('preco') }}" class="text-decoration-none text-white">Visita virtual Guimaraes </a>
                             </li>
                         </ul>
                     </div>
@@ -151,13 +146,17 @@
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
             © 2022 Copyright: Scan 3D /
-            <a class="text-decoration-none text-white" href="{{ asset('privacidade') }}">Política de Privacidade</a>
-            / <a class="text-decoration-none text-white"  href="{{ asset('noticia-legal') }}">Noticia legal</a>
+            <a class="text-decoration-none text-white" href="{{ path('privacidade') }}">Política de Privacidade</a>
+            / <a class="text-decoration-none text-white"  href="{{ path('noticia-legal') }}">Noticia legal</a>
 
         </div>
         <!-- Copyright -->
     </footer>
     <!-- Footer -->
 {% endblock %}
-
+    {% block javascripts %}
+        <script  src="{{ asset('https://kit.fontawesome.com/eda674f759.js') }}" crossorigin="anonymous"></script>
+        <script  src="{{ asset('https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js') }}" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script  src="{{ asset('js/cookiechoices.js') }}"></script><script>document.addEventListener('DOMContentLoaded', function(event){cookieChoices.showCookieConsentBar('Este site utiliza cookies para lhe oferecer o melhor serviço. Ao continuar sua navegação, você aceita o uso de cookies.', 'Aceito', 'Saber mais', '{{ path('privacidade') }}');});</script>
+    {% endblock %}
 </html>

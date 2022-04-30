@@ -334,49 +334,30 @@ h4 {
 }
 
 
+
+
 /* Responsive */
 
 @media screen and (max-width: 380px) {
     .card,
     .card-show,
-    .card-show2 {
-        width: 300px;
-        margin: auto;
-        margin-bottom: 20px;
-    }
-
-
-    .temoignage {
-        width: 300px;
-        margin-bottom: 20px;
-    }
-
     .block-responsive,
-    .block-iframe {
+    .card-show2,
+    .temoignage,
+    .block-iframe{
         width: 330px;
         margin: auto;
         margin-bottom: 20px;
     }
-
 
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     .card,
     .card-show,
-    .card-show2 {
-        width: 330px;
-        margin: auto;
-        margin-bottom: 20px;
-    }
-
-
-    .temoignage {
-        width: 300px;
-        margin-bottom: 20px;
-    }
-
     .block-responsive,
+    .card-show2,
+    .temoignage,
     .block-iframe {
         width: 330px;
         margin: auto;
@@ -384,21 +365,14 @@ h4 {
     }
 
 
-@media screen and (max-width: 850px) {
-    .card {
-        width: 300px;
-        margin: auto;
-        margin-bottom: 20px;
-    }
-
-    .temoignage {
-        width: 300px;
-        margin-bottom: 20px;
-    }
-
+@media screen and (min-width: 600px) {
+    .card,
+    .card-show,
     .block-responsive,
+    .card-show2,
+    .temoignage,
     .block-iframe {
-        width: 300px;
+        width: 500px;
         margin: auto;
         margin-bottom: 20px;
     }
