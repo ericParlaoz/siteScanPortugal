@@ -20,18 +20,13 @@
     {% block header %}
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <img src="{{ asset('images/logo.svg') }}"  height="60" class="ms-3" alt="">
+                <a href="{{ path('accueil') }}" ><img src="{{ asset('images/logo.svg') }}"  height="60" class="ms-3" alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarColor03">
                     <ul class="ms-5 navbar-nav me-auto align-items-center">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="/">Initial
-                                <span class="visually-hidden">(current)</span>
-                            </a>
-                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ path('accueil') }}#saber"><span data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Visitas virtuais</span></a>
                         </li>
@@ -88,7 +83,8 @@
             <!-- Section: Links -->
             <section class="">
                 <!--Grid row-->
-                <div class="row">
+                <div class="footer row">
+                    <img src="{{ asset('images/logo-footer.svg') }}"  height="70" class="mb-5" alt="">
                     <!--Grid column-->
                     <div class="col-sm-6">
                         <h5 class="H4-couleur text-uppercase">Sobre</h5>
@@ -131,7 +127,7 @@
                                 <a href="tel:928158074" class="text-decoration-none text-white">Tel: +351 928 158 074</a>
                             </li>
                             <li>
-                                <a href="#" class="text-decoration-none text-white">contact@scan3D.com</a>
+                                <a href="#" class="text-decoration-none text-white">contact@visita-360.com</a>
                             </li>
                         </ul>
                     </div>
@@ -144,10 +140,11 @@
         <!-- Grid container -->
 
         <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2022 Copyright: Scan 3D /
+        <div class="copyright text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            2022 Copyright © visita-360.com |
             <a class="text-decoration-none text-white" href="{{ path('privacidade') }}">Política de Privacidade</a>
-            / <a class="text-decoration-none text-white"  href="{{ path('noticia-legal') }}">Noticia legal</a>
+            - <a class="text-decoration-none text-white"  href="{{ path('noticia-legal') }}">Noticia legal</a>
+            - <a href="https://www.livroreclamacoes.pt/Inicio/" class="text-decoration-none text-white" target="_blank">Livro de Reclamações</a>
 
         </div>
         <!-- Copyright -->
