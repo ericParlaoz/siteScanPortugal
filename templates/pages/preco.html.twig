@@ -1,6 +1,7 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Scan 3D{% endblock %}
+{% block title %}Preços para uma visita virtual - Visita 360{% endblock %}
+{% block meta_description %}Os preços de um tour virtual 3D dependem da área da sua propriedade e das opções que você toma.{% endblock %}
 
 {% block stylesheets %}
     {{ parent() }}
@@ -23,9 +24,9 @@
             <div class="container  ">
                 <div class="row ">
                     <div class="col mt-5">
-                        <h1 class="H1-blanc wow animate__animated animate__fadeInLeft">Tarif de visite virtuelle 3D</h1>
-                        <H2 class="H2-couleurs-head">POUR PARTICULIERS & PROFESSIONNELS</H2>
-                        <a href="{{ path('preco') }}#price"><button type="button" class="button btn">Découvrir</button></a>
+                        <h1 class="H1-blanc wow animate__animated animate__fadeInLeft">Preço do tour virtual 3D</h1>
+                        <H2 class="H2-couleurs-head">PARA INDIVÍDUOS E PROFISSIONAIS</H2>
+                        <a href="{{ path('preco') }}#price"><button type="button" class="button btn">Saber mais</button></a>
                     </div>
                     <div class="col">
                         <img class="mx-auto d-block cam-img wow animate__animated animate__fadeInRight"
@@ -37,32 +38,69 @@
     </section>
     <section class="section2" id="price">
         <div class="container mt-5">
-            <h2 class="H2-grey">Tarif visite virtuelle 3d Matterport ® </h2>
+            <h2 class="H2-grey">Preço Matterport 3d tour virtual ® </h2>
             <hr class="barre-couleur">
-            <p>Avec le tarif visite virtuelle 3d, nous réalisons une visite virtuelle via la technologie Matterport. Nous apportons le plus grand soin aux détails, effectuons une inspection des lieux avant la prise de vue et nous nous assurons que tout est en ordre pour des images optimales. Cette prestation est réalisée sur rendez-vous.</p>
+            <p>Com a taxa de tour virtual 3d, fazemos um tour virtual utilizando a tecnologia Matterport. Prestamos a máxima atenção aos detalhes, realizamos uma inspeção de localização pré-gravação e garantimos que tudo esteja em ordem para obter imagens ideais. Este serviço é realizado por marcação.</p>
             <div class="row align-items-center">
                 <div class="col">
                     <img class="" src="{{ asset('images/scan360.jpg') }}" width="200" alt="">
-                    <h2 class="H2-grey">A partir de 120€ HT *</h2>
+                    <h2 class="H2-grey">A partir de 75€ HT *</h2>
                     <hr class="barre-couleur">
-                    <p>* Pour une numérisation jusqu’à 100 m2  (Au delà 1€ ht par m2 supplémentaires)</p>
-                    <p>* Déplacement de 50 km offert autour de Vila Verde (Au delà 1€ ht par Km supplémentaires)</p>
+                    <p>* Para digitalização até 80 m2 (acima de 1€, excluindo impostos por m2 adicional)</p>
+                    <p>* Viagem de 30 km oferecida em torno de Vila Verde (acima de 1€ excluindo impostos por Km adicional)</p>
                 </div>
                 <div class="col-sm-7">
                    <div class="card wow animate__animated animate__zoomIn">
-                       <h3 class="H4-couleur">Contenu Numérisation Matterport</h3>
-                       <p>Scanning 3D avec technologie MATTERPORT jusqu’à 100 m2</p>
-                       <p> Fourniture de la visite virtuelle par lien URL (Ex. : https://my.matterport.com/show/xxxx) incluant :</p>
-                       <p><i class="fa-solid fa-circle-check"></i> Une visite virtuelle 3D accessible </p>
-                       <p><i class="fa-solid fa-circle-check"></i> Une vue type « Maison de poupée » </p>
-                       <p><i class="fa-solid fa-circle-check"></i> Un hébergement des données 6 mois </p>
-                       <p><i class="fa-solid fa-circle-check"></i> 5 à 10 Photos HDR 4K  </p>
-                       <p><i class="fa-solid fa-circle-check"></i> 1 vidéo de 15 secondes (non personnalisable)  </p>
+                       <h3 class="H4-couleur">Matterport de digitalização de conteúdo</h3>
+                       <p>Digitalização 3D com tecnologia MATTERPORT até 80 m2.</p>
+                       <p> Disponibilização do tour virtual por link de URL (Ex.: https://my.matterport.com/show/xxxx) incluindo :</p>
+                       <p><i class="fa-solid fa-circle-check"></i> Um tour virtual 3D acessível </p>
+                       <p><i class="fa-solid fa-circle-check"></i> Uma visão típica de « Casa de Bonecas » </p>
+                       <p><i class="fa-solid fa-circle-check"></i> Hospedagem de dados por 6 meses </p>
+                       <p><i class="fa-solid fa-circle-check"></i> 5 a 10 fotos 4K HDR  </p>
+                       <p><i class="fa-solid fa-circle-check"></i> 1 vídeo de 15 segundos (não personalizável) </p>
                        <a href="{{ path('preco') }}#contact"><button type="button" class="button btn">Réserva uma visita virtual</button></a>
                    </div>
                 </div>
                 </div>
+            <h2 class="mt-5 H2-grey">Para Agentes imobiliários</h2>
+            <hr class="barre-couleur">
+            <div class="row">
+                <p>Para profissionais do setor imobiliário, oferecemos pacotes de visitas virtuais 5/10/20 com descontos atrativos. Por favor, entre em contato conosco para mais detalhes.</p>
+                <div class="col">
+                    <div class="card wow animate__animated animate__zoomIn">
+                        <h3 class="H4-couleur">Acordo agência</h3>
+                        <h2 class="H2-grey">315€/Mês *</h2>
+                        <p><strong>5 imóveis mensais</strong></p>
+                        <p> Disponibilização do tour virtual por link de URL (Ex.: https://my.matterport.com/show/xxxx) incluindo :</p>
+                        <p><i class="fa-solid fa-circle-check"></i> Um tour virtual 3D acessível </p>
+                        <p><i class="fa-solid fa-circle-check"></i> Uma visão típica de « Casa de Bonecas » </p>
+                        <p><i class="fa-solid fa-circle-check"></i> Hospedagem de dados por 6 meses </p>
+                        <p><i class="fa-solid fa-circle-check"></i> 5 a 10 fotos 4K HDR  </p>
+                        <p><i class="fa-solid fa-circle-check"></i> 1 vídeo de 15 segundos (não personalizável) </p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card wow animate__animated animate__zoomIn">
+                        <h3 class="H4-couleur">Acordo agência</h3>
+                        <h2 class="H2-grey">Orçamento a definir</h2>
+                        <p><strong>Nº imóveis conforme necessidade da empresa</strong></p>
+                        <p> Disponibilização do tour virtual por link de URL (Ex.: https://my.matterport.com/show/xxxx) incluindo :</p>
+                        <p><i class="fa-solid fa-circle-check"></i> Um tour virtual 3D acessível </p>
+                        <p><i class="fa-solid fa-circle-check"></i> Uma visão típica de « Casa de Bonecas » </p>
+                        <p><i class="fa-solid fa-circle-check"></i> Hospedagem de dados por 6 meses </p>
+                        <p><i class="fa-solid fa-circle-check"></i> 5 a 10 fotos 4K HDR  </p>
+                        <p><i class="fa-solid fa-circle-check"></i> 1 vídeo de 15 segundos (não personalizável) </p>
+                    </div>
+                </div>
             </div>
+            <div class="row">
+                <p>* Para digitalização até 80 m2 (acima de 1€, excluindo impostos por m2 adicional)</p>
+                <p>* Viagem de 30 km oferecida em torno de Vila Verde (acima de 1€ excluindo impostos por Km adicional)</p>
+            </div>
+            <a href="{{ path('preco') }}#contact"><button type="button" class="button btn">Réserva uma visita virtual</button></a>
+            <a href="tel:928158074"><button type="button" class="button-border btn"> +351 928 158 074</button></a>
+        </div>
     </section>
     <section class="section4">
         <div class="container">
@@ -97,85 +135,86 @@
     </section>
     <section class="section6">
         <div class="container mt-5">
-            <h2 class="H2-grey">Déroulement de notre prestation</h2>
+            <h2 class="H2-grey">Progresso do nosso serviço</h2>
             <hr class="barre-couleur">
             <div class="row text-center mb-3">
                 <div class="col wow animate__animated animate__zoomIn">
                     <div class="card">
                         <img class="mx-auto d-block" src="{{ asset('images/diag-icon.jpg') }}" width="80" alt="">
-                        <h4 class="H4-couleur">Gestion du projet</h4>
-                        <p>Après identification de vos besoins, nous planifions ensemble l’organisation des prises de
-                            vue de vos différents espaces.</p>
+                        <h4 class="H4-color">Gerenciamento de projetos</h4>
+                        <p>Após identificar suas necessidades, planejamos juntos a organização do
+                            visualização de seus diferentes espaços.</p>
                     </div>
                 </div>
                 <div class="col wow animate__animated animate__zoomIn">
                     <div class="card">
                         <img class="mx-auto d-block" src="{{ asset('images/photos-icon.jpg') }}" width="80" alt="">
-                        <h4 class="H4-couleur">Prise de vues</h4>
-                        <p>Nous venons sur place pour numériser l’espace et effectuer les prises de vue.</p>
+                        <h4 class="H4-color">Fotografia</h4>
+                        <p>Viemos ao local para escanear o espaço e tirar as fotos.</p>
                     </div>
                 </div>
                 <div class="col wow animate__animated animate__zoomIn">
                     <div class="card">
                         <img class="mx-auto d-block" src="{{ asset('images/rendu-icon.jpg') }}" width="80" alt="">
-                        <h4 class="H4-couleur">Rendu</h4>
-                        <p>48 heures après la numérisation, nous vous envoyons le lien de vos visites virtuelles 3D par
-                            email.</p>
+                        <h4 class="H4-color">Renderização</h4>
+                        <p>48 horas após a digitalização, enviamos o link de seus tours virtuais 3D por
+                            e-mail.</p>
                     </div>
                 </div>
             </div>
             <div class="row align-items-center">
                 <div class="col">
                     <img src="{{ asset('images/atout5.jpg') }}" class="img-fluid img-effet wow animate__animated animate__zoomIn"
-                         alt="">
+                         alt="tour virtual braga">
                 </div>
                 <div class="col-sm-7">
-                    <h4 class="H4-couleur">Suite à notre intervention nous vous délivrons entre 24 et 48h :</h4>
+                    <h4 class="H4-couleur">Após nossa intervenção, entregaremos a você entre 24 e 48 horas:</h4>
                     <ul>
-                        <li>La visite virtuelle 3D accessible en WebTV, PC, tablettes, smartphones</li>
-                        <li>La visualisation en « Maison de poupée » du bien</li>
-                        <li>Un parcours de visite automatique du bien</li>
-                        <li>Un jeu de photos HDR 4K</li>
-                        <li>La visualisation en réalité virtuelle immersive (via casque VR non fourni)</li>
+                        <li>O tour virtual 3D acessível em WebTV, PC, tablets, smartphones</li>
+                        <li>A visualização "Casa de bonecas" da propriedade</li>
+                        <li>Um tour automático pela propriedade</li>
+                        <li>Um jogo de fotos 4K HDR</li>
+                        <li>Visualização em realidade virtual imersiva (via headset VR não fornecido)</li>
                     </ul>
-                        <a href="{{ path('preco') }}#contact"><button type="button" class="button btn">Réserva uma visita virtual</button></a>
-                        <a href="tel:0788102112"><button type="button" class="button-border btn"> 07 88 10 21 12</button></a>
+
+                    <a href="{{ path('preco') }}#contact"><button type="button" class="button btn">Réserva uma visita virtual</button></a>
+                    <a href="tel:928158074"><button type="button" class="button-border btn">  +351 928 158 074</button></a>
                 </div>
             </div>
         </div>
     </section>
     <section class="section7" id="vr">
         <div class="container">
-            <h2 class="H2-grey">Réalité virtuelle</h2>
+            <h2 class="H2-grey">Realidade virtual</h2>
             <hr class="barre-couleur">
             <div class="row">
                 <div class="col-sm-7">
-                    <p>Grâce aux casques de réalité virtuelle, vous pouvez visualiser toutes nos visites virtuelles en
-                        réalité virtuelle.<br><br>
-                        Vous utilisez votre smartphone comme écran dans le casque de réalité virtuelle, une immersion
-                        totale et saisissante dans votre lieu.<br><br>
-                        Comment visualiser nos visites virtuelles en réalité virtuelle ?</p>
+                    <p>Graças aos headsets de realidade virtual, você pode ver todos os nossos tours virtuais em
+                        realidade virtual.<br><br>
+                        Você usa seu smartphone como tela no headset de realidade virtual, uma imersão
+                        total e marcante em seu lugar.<br><br>
+                        Como visualizar nossos tours virtuais em realidade virtual?</p>
                     <ul>
-                        <li>Ouvrez la visite virtuelle sur votre mobile</li>
-                        <li>Activez le mode VR</li>
-                        <li>Placez votre téléphone dans le casque de réalité virtuelle</li>
-                        <li> Regardez dans le casque et laissez vous surprendre…</li>
+                        <li>Abra o tour virtual no seu celular</li>
+                        <li>Ativar o modo VR</li>
+                        <li>Coloque seu smartphone no headset de RV</li>
+                        <li>Olhe para o capacete e deixe-se surpreender…</li>
                     </ul>
                     <div class="mt-5">
-                        <a href="{{ path('preco') }}#contact"><input type="button" class="button-border btn mb-3" value="Contactez-nous"></a>
+                        <a href="{{ path('preco') }}#contact"><input type="button" class="button-border btn mb-3" value="Contate-Nos"></a>
                     </div>
                 </div>
                 <div class="col">
                     <img src="{{ asset('images/vr.jpg') }}"
-                         class="mx-auto d-block wow animate__animated animate__fadeInRight" alt="">
+                         class="mx-auto d-block wow animate__animated animate__fadeInRight" alt="tour virtual Vila Verde">
                 </div>
             </div>
         </div>
     </section>
     <section class="section8">
         <div class="container">
-            <div class="titre">Nom du site</div>
-            <h2 class="H2-grey">Témoignages clients</h2>
+            <div class="titre">Scan 3D</div>
+            <h2 class="H2-grey">Depoimentos de clientes</h2>
             <hr class="barre-couleur">
             <div class="row mx-auto">
                 <div class="col wow animate__animated animate__zoomIn">
@@ -183,10 +222,10 @@
                         <div class="name">José SILVA</div>
                         <div class="comment">LOJA</div>
                         <img class="mb-3" src="{{ asset('images/etoiles.svg') }}" alt="">
-                        <p>"Une visite virtuelle et des photos simplement magique a l’écoute et très professionnel Eric
-                            sait mettre en valeur notre établissement toujours a l‘écoute, je le conseille vivement a ce
-                            qui ne le connaisse pas car en plus de sa technique, il a une explication de son travail
-                            très claire encore merci a Eric."</p>
+                        <p>"Uma visita virtual e fotos simplesmente mágicas atencioso e muito profissional Eric
+                            sabe destacar nosso estabelecimento sempre ouvindo, recomendo fortemente para isso
+                            que não o conhece porque além de sua técnica, ele tem uma explicação de seu trabalho
+                            muito claro obrigado novamente a Eric."</p>
                     </div>
                 </div>
                 <div class="col wow animate__animated animate__zoomIn">
@@ -194,7 +233,7 @@
                         <div class="name">Marco FERREIRA</div>
                         <div class="comment">LOJA</div>
                         <img class="mb-3" src="{{ asset('images/etoiles.svg') }}" alt="">
-                        <p>Nous avons beaucoup apprécié de travailler avec Mr éric PARLAOZ. Rapide, fiable, il a su rendre la beauté et l’unicité du lieu dans un contact très agréable. Un beau travail qui valorise notre site web !</p>
+                        <p>Gostamos muito de trabalhar com o Sr. Éric PARLAOZ. Rápido, confiável, conseguiu traduzir a beleza e singularidade do lugar em um contato muito agradável. Um ótimo trabalho que aprimora nosso site!</p>
                     </div>
                 </div>
                 <div class="col wow animate__animated animate__zoomIn">
@@ -202,15 +241,14 @@
                         <div class="name">Sarah GOMES</div>
                         <div class="comment">Agence immobilière</div>
                         <img class="mb-3" src="{{ asset('images/etoiles.svg') }}" alt="">
-                        <p>Déjà 3 visites virtuelles pour notre agence immobilière. Un CA qui augmente et qui permet a mes clients d’avoir un visu sur les produits que nous proposons. Félicitations à éric PARLAOZ pour son professionnalisme et son talent à prix défiant toute concurrence .</p>
-                    </div>
+                        <p>Já 3 tours virtuais para nossa imobiliária. Um volume de negócios que aumenta e que permite aos meus clientes ter uma visão dos produtos que oferecemos. Parabéns a Éric PARLAOZ pelo seu profissionalismo e talento a um preço imbatível.</p>                    </div>
                 </div>
             </div>
         </div>
     </section>
     <section class="section9" id="contact">
         <div class="parallax-effect-footer">
-            <h2 class="H2-couleurs text-center">Olá! Entre em contacto connosco</h2>
+            <h2 class="p-3 H2-couleurs text-center">Olá! Entre em contacto connosco</h2>
             <div class="container col-sm-12">
                 {% for message in app.flashes('success') %}
                     <div class="text-center alert-success">{{ message }}</div>

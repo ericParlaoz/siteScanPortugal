@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Visita virtual de 360° e digitalização do espaço{% endblock %}
+{% block title %}Visita virtual de 360° e digitalização do espaço - Visita 360{% endblock %}
 {% block meta_description %}Um tour virtual é mais que uma simples foto, é uma imersão em um ambiente 360°. Oferece uma imagem vívida de alta qualidade, total liberdade de navegação.{% endblock %}
 {% block stylesheets %}
     {{ parent() }}
@@ -261,7 +261,7 @@
                     </ul>
 
                     <a href="{{ path('accueil') }}#contact"><button type="button" class="button btn">Réserva uma visita virtual</button></a>
-                    <a href="tel:0788102112"><button type="button" class="button-border btn"> 07 88 10 21 12</button></a>
+                    <a href="tel:928158074"><button type="button" class="button-border btn">  +351 928 158 074</button></a>
                 </div>
             </div>
         </div>
@@ -331,7 +331,7 @@
     </section>
     <section class="section9" id="contact">
         <div class="parallax-effect-footer">
-            <h2 class="H2-couleurs text-center">Olá! Entre em contacto connosco</h2>
+            <h2 class="p-3 H2-couleurs text-center">Olá! Entre em contacto connosco</h2>
             <div class="container col-sm-12">
                 {% for message in app.flashes('success') %}
                     <div class="text-center alert-success">{{ message }}</div>
