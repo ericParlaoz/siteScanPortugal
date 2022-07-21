@@ -8,15 +8,17 @@ use App\Form\ContactType;
 use App\Repository\PorfolioRepository;
 use App\Service\SendMailService;
 use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
 class PagesController extends AbstractController
 {
     #[Route('/', name: 'accueil')]
-    public function index(Request $request, SendMailService $mail, EntityManagerInterface $entityManager): Response
+    public function index(Request $request, MailerInterface $mailer, EntityManagerInterface $entityManager): Response
     {
         $client = new Contact();
         $form = $this->createForm(ContactType::class, $client);
@@ -24,21 +26,27 @@ class PagesController extends AbstractController
 
         if($form->isSubmitted() && $form->isValid()){
 
-            $contactFormData = $form->getData();
+            $emailNom = $client->getNom();
+            $emailTel = $client->getTelephone();
+            $emailEmail = $client->getEmail();
+            $emailMessage = $client->getMessage();
+            $emailRgpd = $client->getConfidentialite();
 
-            $entityManager->persist($client);
-            $entityManager->flush();
+            $email = (new TemplatedEmail())
+                ->from('contact@visita-360.com')
+                ->to('contact@visita-360.com')
+                ->text('Nouvelle email')
+                ->subject('Nouveau message')
+                ->htmlTemplate('mail/index.html.twig')
+                ->context([
+                    'emailNom' => $emailNom,
+                    'emailTel' => $emailTel,
+                    'emailEmail' => $emailEmail,
+                    'emailMessage' => $emailMessage,
+                    'emailRgpd' => $emailRgpd
+                ]);
 
-            $mail->send(
-                $contactFormData->getEmail(),
-                'contact@logo-concept-host.fr',
-                'vous avez reçu un email',
-                'Sender : '.$contactFormData->getEmail().\PHP_EOL.
-
-
-                $contactFormData->getMessage(),
-                'text/plain'
-            );
+            $mailer->send($email);
 
             $this->addFlash('success', 'Sua mensagem foi enviada');
             return $this->redirect('#contact');
@@ -50,7 +58,7 @@ class PagesController extends AbstractController
     }
 
     #[Route('/preco-visita-virtual', name: 'preco')]
-    public function preco(Request $request, SendMailService $mail, EntityManagerInterface $entityManager): Response
+    public function preco(Request $request, MailerInterface $mailer, EntityManagerInterface $entityManager): Response
     {
         $client = new Contact();
         $form = $this->createForm(ContactType::class, $client);
@@ -58,22 +66,27 @@ class PagesController extends AbstractController
 
         if($form->isSubmitted() && $form->isValid()){
 
-            $contactFormData = $form->getData();
+            $emailNom = $client->getNom();
+            $emailTel = $client->getTelephone();
+            $emailEmail = $client->getEmail();
+            $emailMessage = $client->getMessage();
+            $emailRgpd = $client->getConfidentialite();
 
+            $email = (new TemplatedEmail())
+                ->from('contact@visita-360.com')
+                ->to('contact@visita-360.com')
+                ->text('Nouvelle email')
+                ->subject('Nouveau message')
+                ->htmlTemplate('mail/index.html.twig')
+                ->context([
+                    'emailNom' => $emailNom,
+                    'emailTel' => $emailTel,
+                    'emailEmail' => $emailEmail,
+                    'emailMessage' => $emailMessage,
+                    'emailRgpd' => $emailRgpd
+                ]);
 
-            $entityManager->persist($client);
-            $entityManager->flush();
-
-            $mail->send(
-                $contactFormData->getEmail(),
-                'contact@logo-concept-host.fr',
-                'vous avez reçu un email',
-                'Sender : '.$contactFormData->getEmail().\PHP_EOL.
-
-
-                $contactFormData->getMessage(),
-                'text/plain'
-            );
+            $mailer->send($email);
 
             $this->addFlash('success', 'Sua mensagem foi enviada');
             return $this->redirect('preco-visita-virtual#contact');
@@ -85,7 +98,7 @@ class PagesController extends AbstractController
     }
 
     #[Route('/portfolio-visita-virtual', name: 'portfolio')]
-    public function portfolio(Request $request, SendMailService $mail, EntityManagerInterface $entityManager, PorfolioRepository $porfolioRepository): Response
+    public function portfolio(Request $request, MailerInterface $mailer, EntityManagerInterface $entityManager, PorfolioRepository $porfolioRepository): Response
     {
 
         $client = new Contact();
@@ -94,21 +107,27 @@ class PagesController extends AbstractController
 
         if($form->isSubmitted() && $form->isValid()){
 
-            $contactFormData = $form->getData();
+            $emailNom = $client->getNom();
+            $emailTel = $client->getTelephone();
+            $emailEmail = $client->getEmail();
+            $emailMessage = $client->getMessage();
+            $emailRgpd = $client->getConfidentialite();
 
-            $entityManager->persist($client);
-            $entityManager->flush();
+            $email = (new TemplatedEmail())
+                ->from('contact@visita-360.com')
+                ->to('contact@visita-360.com')
+                ->text('Nouvelle email')
+                ->subject('Nouveau message')
+                ->htmlTemplate('mail/index.html.twig')
+                ->context([
+                    'emailNom' => $emailNom,
+                    'emailTel' => $emailTel,
+                    'emailEmail' => $emailEmail,
+                    'emailMessage' => $emailMessage,
+                    'emailRgpd' => $emailRgpd
+                ]);
 
-            $mail->send(
-                $contactFormData->getEmail(),
-                'contact@logo-concept-host.fr',
-                'vous avez reçu un email',
-                'Sender : '.$contactFormData->getEmail().\PHP_EOL.
-
-
-                $contactFormData->getMessage(),
-                'text/plain'
-            );
+            $mailer->send($email);
 
             $this->addFlash('success', 'Sua mensagem foi enviada');
             return $this->redirect('portfolio-visita-virtual#contact');

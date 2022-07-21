@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/main.css') }}">
     <link rel="stylesheet"
           href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css') }}">
+    <link rel="canonical" href="{{ path('preco') }}" />
 {% endblock %}
 
 {% block javascripts %}
@@ -98,7 +99,7 @@
                 <a href="{{ path('preco') }}#contact"><button type="button" class="button btn">Réserva uma visita virtual</button></a>
                 <a href="tel:928158074"><button type="button" class="button-border btn"> +351 928 158 074</button></a>
             </div>
-            <img src="{{ asset('images/google.jpg') }}" alt="tour virtual google street view">
+            <img src="{{ asset('images/google.jpg') }}" class="img-fluid" alt="tour virtual google street view">
         </div>
     </section>
     <section class="section4">

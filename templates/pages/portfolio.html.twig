@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/main.css') }}">
     <link rel="stylesheet"
           href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css') }}">
+    <link rel="canonical" href="{{ path('portfolio') }}" />
 {% endblock %}
 
 {% block javascripts %}
@@ -42,6 +43,7 @@
         <div class="container mt-5">
             <h2 class="H2-grey">Conheça algumas de nossas conquistas</h2>
             <hr class="barre-couleur">
+            <div class="row">
             {% for annonce in portfolio %}
                 <div class="col">
                     <div class="card-show" style="width: 18rem;">
@@ -59,6 +61,7 @@
                     </div>
                 </div>
             {% endfor %}
+            </div>
         </div>
         <div class="text-center mt-5">
             <a href="{{ path('portfolio') }}#contact"><button type="button" class="button btn">Réserva uma visita virtual</button></a>
